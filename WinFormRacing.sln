@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RaceApp", "WinFormRacing\RaceApp.csproj", "{DA1CE6F2-CADF-44A9-87CE-56B671F5EF47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA1CE6F2-CADF-44A9-87CE-56B671F5EF47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1CE6F2-CADF-44A9-87CE-56B671F5EF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1CE6F2-CADF-44A9-87CE-56B671F5EF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1CE6F2-CADF-44A9-87CE-56B671F5EF47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBDBD3B8-03C7-4B10-936D-62D3D67C8594}
+	EndGlobalSection
+EndGlobal
