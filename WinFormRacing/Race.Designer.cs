@@ -24,9 +24,7 @@ namespace WinFormRacing
             this.car2 = new System.Windows.Forms.Button();
             this.car3 = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
-            this.track = new System.Windows.Forms.PictureBox();
             this.finish = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.track)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
             this.SuspendLayout();
             Control.CheckForIllegalCrossThreadCalls = false;
@@ -71,16 +69,6 @@ namespace WinFormRacing
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.StartClick);
             // 
-            // pictureBox1
-            // 
-            this.track.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.track.Location = new System.Drawing.Point(48, 51);
-            this.track.Name = "track";
-            this.track.Size = new System.Drawing.Size(710, 213);
-            this.track.TabIndex = 4;
-            this.track.TabStop = false;
-
-            // 
             // finish
             // 
             this.finish.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -100,10 +88,8 @@ namespace WinFormRacing
             this.Controls.Add(this.car3);
             this.Controls.Add(this.car2);
             this.Controls.Add(this.car1);
-            this.Controls.Add(this.track);
             this.Name = "Race";
             this.Text = "Race";
-            ((System.ComponentModel.ISupportInitialize)(this.track)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).EndInit();
             this.ResumeLayout(false);
 
@@ -115,7 +101,6 @@ namespace WinFormRacing
         private System.Windows.Forms.Button car2;
         private System.Windows.Forms.Button car3;
         private System.Windows.Forms.Button start;
-        private System.Windows.Forms.PictureBox track;
         private System.Windows.Forms.PictureBox finish;
     }
 }

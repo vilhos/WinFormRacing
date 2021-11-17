@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace WinFormRacing
         bool car_1 = false;
         bool car_2 = false;
         bool car_3 = false;
+        List<Thread> threads;
         Random random = new Random();
         public Race()
         {
@@ -20,7 +22,7 @@ namespace WinFormRacing
             Thread thread1 = new Thread(() => MoveCar1(car1));
             Thread thread2 = new Thread(() => MoveCar2(car2));
             Thread thread3 = new Thread(() => MoveCar3(car3));
-
+            threads = new List<Thread> { thread1, thread2, thread3 };
             thread1.Start();
             thread2.Start();
             thread3.Start();
@@ -30,9 +32,12 @@ namespace WinFormRacing
         {
             While(car);
             car_1 = true;
-
             if (car_2 == false && car_3 == false)
+            {
                 MessageBox.Show($"{car1.Name} is win");
+                threads[1].Abort();
+                threads[2].Abort();
+            }               
         }
 
         public void MoveCar2(Button car)
@@ -40,7 +45,11 @@ namespace WinFormRacing
             While(car);
             car_2 = true;
             if (car_1 == false && car_3 == false)
+            {
                 MessageBox.Show($"{car2.Name} is win");
+                threads[0].Abort();
+                threads[2].Abort();
+            }
         }
 
         public void MoveCar3(Button car)
@@ -48,7 +57,11 @@ namespace WinFormRacing
             While(car);
             car_3 = true;
             if (car_1 == false && car_2 == false)
+            {
                 MessageBox.Show($"{car3.Name} is win");
+                threads[0].Abort();
+                threads[1].Abort();
+            }
         }
 
         public void While(Button car)
